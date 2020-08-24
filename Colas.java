@@ -8,31 +8,17 @@ import java.util.Scanner;
 
 public class Colas {
    int iTope=-1;
-    char caracteres[];
+    char simbolos[];
 
     Colas(){
-        int max=0;
-        caracteres=new char[max];
-    }
-
-    private Colas(int m) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int x=0;
+        simbolos=new char[x];
     }
     public boolean llena(){
-        if(iTope==caracteres.length-1){
-            return true;
-        }
-        else{
-            return false;
-        }
+       return iTope==simbolos.length-1;
     }
     public boolean vacia(){
-        if(iTope==-1){
-            return true;
-        }
-        else{
-            return false;
-        }
+       return iTope==-1;
     }
     public void push(){
         char dato = 0;
@@ -41,7 +27,7 @@ public class Colas {
         }
         else{
             iTope++;
-            caracteres[iTope]=dato;
+            simbolos[iTope]=dato;
         }
     }
     public char pop(){
@@ -50,7 +36,7 @@ public class Colas {
             System.out.println("Empty");
         }
         else{
-            aux = caracteres[iTope];
+            aux = simbolos[iTope];
             iTope--;
         }
         return aux;
@@ -61,8 +47,7 @@ public static void main(String[] args)throws IOException{
         //cola de tamaño sea 10
         System.out.println("ingresa el tamaño de la cola");
         m = sc.nextInt();//10
-        Colas c; 
-       c = new Colas(m);
+        Colas c  = new Colas(m); 
         int validarpop = 0;
         int validarpush=0;
         BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
@@ -110,9 +95,7 @@ public static void main(String[] args)throws IOException{
         else{
                 System.out.println("Entrada Erronea");
         }
-                    //(()))[][[](  correcta o incorrecta
-      
-        
+           
     } 
     
 }
