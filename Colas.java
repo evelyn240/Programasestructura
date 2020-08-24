@@ -44,10 +44,10 @@ public class Colas {
 public static void main(String[] args)throws IOException{
      int opt, m=0;
         Scanner sc = new Scanner(System.in);
-        //cola de tamaño sea 10
+       
         System.out.println("ingresa el tamaño de la cola");
-        m = sc.nextInt();//10
-        Colas c  = new Colas(m); 
+        m = sc.nextInt();
+        Colas c  = new Colas(x); 
         int validarpop = 0;
         int validarpush=0;
         BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
